@@ -114,7 +114,7 @@ def verify_config_colors(config):
 def load_config(config_path):
     """Tries to load a config file from YAML."""
     with open(config_path) as f:
-        return yaml.load(f, Loader=yaml.FullLoader)
+        return yaml.load(f, Loader=yaml.SafeLoader)
 
 
 def is_config_json(config_path):
